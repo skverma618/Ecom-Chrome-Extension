@@ -1,24 +1,23 @@
-import logo from './logo.svg';
+/*global chrome*/
+import React, { useState, useEffect } from 'react';
 import './App.css';
+import Main from './Main';
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 function App() {
+
+  const router = createBrowserRouter([
+    {
+      path: ":asin?",
+      element: <Main />,
+    },
+  ]);
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      <RouterProvider router={router} />
+    </React.Fragment>
   );
 }
 
