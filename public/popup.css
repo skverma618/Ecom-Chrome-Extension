@@ -1,0 +1,26 @@
+/* public/popup.css */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+#app {
+    height: 500px;
+    width: 500px;
+    /* Adjust width as needed */
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    /* Background color of the sidebar */
+    border-left: 1px solid #ccc;
+    /* Border for separation */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    /* Add shadow for better visibility */
+    z-index: 9999;
+    /* Ensure it's on top of other content */
+    overflow-y: auto;
+    /* Enable vertical scrolling if needed */
+}
